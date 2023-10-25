@@ -24,6 +24,10 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(cookieParser());
 
+app.get('*', (req, res) => {
+    res.redirect('https://saishet.com' + req.originalUrl);
+});
+
 
 
 /* ROUTE HANDLERS */
